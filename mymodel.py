@@ -37,8 +37,8 @@ class MyModel(torch.nn.Module):
                     x1 = conv(x1, adj_t) + x2
                 else:
                     x1 = conv(x1, adj_t)
-            x1 = F.relu(x1)
-            x1 = F.dropout(x1, p=self.dropout, training=self.training)
+            #x1 = F.relu(x1)
+            #x1 = F.dropout(x1, p=self.dropout, training=self.training)
             x_all.append(x1)
         x_final = x_all[0]
         for i in range(1, len(x_all)):
