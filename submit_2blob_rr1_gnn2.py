@@ -7,11 +7,11 @@ import json
 parser = argparse.ArgumentParser()
 parser.add_argument('--cluster', type=str, default="rr1")
 parser.add_argument('--vc', type=str, default="resrchvc")
-parser.add_argument('--user', type=str, default="") ## replace to your alias
-parser.add_argument('--passwd', type=str, default='') ## enter your password here
-parser.add_argument('--jobname', type=str, default='exp')
-parser.add_argument('--script', type=str, default='f.sh')
-parser.add_argument('--gpu', type=int, default=8)
+parser.add_argument('--user', type=str, default="v-bonli") ## replace to your alias
+parser.add_argument('--passwd', type=str, default='87341918@Lsy') ## enter your password here
+parser.add_argument('--jobname', type=str, default='dis10')
+parser.add_argument('--script', type=str, default='dis.sh')
+parser.add_argument('--gpu', type=int, default=1)
 parser.add_argument('--debug', action='store_true')
 parser.add_argument('--extra-params', default="")
 args = parser.parse_args()
@@ -22,7 +22,7 @@ if args.cluster == "rr1" or args.cluster == "eu3" or args.cluster == "resrchproj
     gpu_per_node = 8
 
 os.environ["PHILLY_VC"] = args.vc
-remote_folder = r"/blob2/yinxia/wu2/scripts"  ## specify you own folder
+remote_folder = r"/blob2/v-bonli/scripts"  ## specify you own folder
 
 remote_script = r'{0}/{1}'.format(remote_folder, args.script)
 
