@@ -40,38 +40,31 @@ negedge = train_neg_edge.reshape(-1)
 print(negedge.size())
 for x in negedge:
     f.write(str(x.item())+"\n")
-f.close()
 f = open("ppa/all.txt", "w")
+ret = train_pos_edge.reshape(-1)
 f.write(str(train_pos_edge.size(0))+"\n")
-for i in range(train_pos_edge.size(0)):
-    x = train_pos_edge[i, 0].item()
-    y = train_pos_edge[i, 1].item()
-    f.write(str(x)+" "+str(y)+"\n")
+for x in ret:
+    f.write(str(x.item())+"\n")
+ret = train_neg_edge.reshape(-1)
 f.write(str(train_neg_edge.size(0))+"\n")
-for i in range(train_neg_edge.size(0)):
-    x = train_neg_edge[i, 0].item()
-    y = train_neg_edge[i, 1].item()
-    f.write(str(x) + " " + str(y) + "\n")
+for x in ret:
+    f.write(str(x.item())+"\n")
+ret = valid_pos_edge.reshape(-1)
 f.write(str(valid_pos_edge.size(0))+"\n")
-for i in range(valid_pos_edge.size(0)):
-    x = valid_pos_edge[i, 0].item()
-    y = valid_pos_edge[i, 1].item()
-    f.write(str(x) + " " + str(y) + "\n")
+for x in ret:
+    f.write(str(x.item())+"\n")
+ret = valid_neg_edge.reshape(-1)
 f.write(str(valid_neg_edge.size(0))+"\n")
-for i in range(valid_neg_edge.size(0)):
-    x = valid_neg_edge[i, 0].item()
-    y = valid_neg_edge[i, 1].item()
-    f.write(str(x) + " " + str(y) + "\n")
+for x in ret:
+    f.write(str(x.item())+"\n")
+ret = test_pos_edge.reshape(-1)
 f.write(str(test_pos_edge.size(0))+"\n")
-for i in range(test_pos_edge.size(0)):
-    x = test_pos_edge[i, 0].item()
-    y = test_pos_edge[i, 1].item()
-    f.write(str(x) + " " + str(y) + "\n")
+for x in ret:
+    f.write(str(x.item())+"\n")
+ret = test_neg_edge.reshape(-1)
 f.write(str(test_neg_edge.size(0))+"\n")
-for i in range(test_neg_edge.size(0)):
-    x = test_neg_edge[i, 0].item()
-    y = test_neg_edge[i, 1].item()
-    f.write(str(x) + " " + str(y) + "\n")
+for x in ret:
+    f.write(str(x.item())+"\n")
 f.close()
 
 '''
