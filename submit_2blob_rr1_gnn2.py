@@ -9,8 +9,8 @@ parser.add_argument('--cluster', type=str, default="rr1")
 parser.add_argument('--vc', type=str, default="resrchvc")
 parser.add_argument('--user', type=str, default="v-bonli") ## replace to your alias
 parser.add_argument('--passwd', type=str, default='87341918@Lsy') ## enter your password here
-parser.add_argument('--jobname', type=str, default='dis10')
-parser.add_argument('--script', type=str, default='dis.sh')
+parser.add_argument('--jobname', type=str, default='debug2')
+parser.add_argument('--script', type=str, default='ppa_200.sh')
 parser.add_argument('--gpu', type=int, default=1)
 parser.add_argument('--debug', action='store_true')
 parser.add_argument('--extra-params', default="")
